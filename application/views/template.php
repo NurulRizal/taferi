@@ -51,12 +51,8 @@ font-size: 16px;"> <?php include'waktu.php'; ?> &nbsp; <a href="<?php echo base_
                     <div class="col-md-12">
                        
 						<?php if($page == 'dash'){
-						echo 'Selamat Datang '.$this->session->userdata('uname');
-						} else if ($page == 'akun'){
-							$this->load->view('akun/akun_list');
-						}?>
-						
-                    </div>
+						echo 'Selamat Datang '.$this->session->userdata('uname');?>
+						</div>
                 </div>
                  <!-- /. ROW  -->
                  <hr />
@@ -71,16 +67,23 @@ font-size: 16px;"> <?php include'waktu.php'; ?> &nbsp; <a href="<?php echo base_
             </div>
          <!-- /. PAGE WRAPPER  -->
       </div>
-        
+	      
         <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->
     <script src="http://localhost/coba_ta3/assets/jquery/jquery-2.1.4.min.js"></script>
     <script src="http://localhost/coba_ta3/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="http://localhost/coba_ta3/assets/jquery/jquery.metisMenu.js"></script>
-    <script src="http://localhost/coba_ta3/assets/jquery/custom.js"></script>
     
     
    
-</body>
-</html>
+
+						<?php } else if ($page == 'akun'){
+							
+							$this->load->view('akun/akun_list');
+						}?>
+						
+    <script src="http://localhost/coba_ta3/assets/jquery/jquery.metisMenu.js"></script>
+    <script src="http://localhost/coba_ta3/assets/jquery/custom.js"></script>
+    </body>
+</html>                
+    
